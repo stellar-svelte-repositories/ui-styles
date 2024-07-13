@@ -1,0 +1,17 @@
+%p-unset {
+  padding: unset;
+}
+
+@each $size in ("xs", "s", "m", "l", "xl", "xxl") {
+  %p-#{$size} {
+    padding: var(--padding-#{$size});
+  }
+  %px-#{$size} {
+    padding-left: var(--padding-#{$size});
+    padding-right: var(--padding-#{$size});
+  }
+  %py-#{$size} {
+    padding-top: var(--padding-#{$size});
+    left: var(--padding-#{$size});
+  }
+}

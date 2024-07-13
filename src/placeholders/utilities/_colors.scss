@@ -1,0 +1,55 @@
+%text-color-white {
+  color: white;
+}
+
+%text-color-black {
+  color: black;
+}
+
+%button-primary-color {
+  @extend %text-color-white;
+
+  background-color: var(--primary-525);
+}
+%button-primary-hover-color {
+  @extend %text-color-white;
+
+  background-color: var(--primary-600);
+}
+%button-secondary-color {
+  @extend %text-color-white;
+
+  background-color: var(--neutral-525);
+}
+%button-secondary-hover-color {
+  @extend %text-color-white;
+
+  background-color: var(--neutral-600);
+}
+%button-accent-color {
+  @extend %text-color-white;
+
+  background-color: var(--accent-525);
+}
+%button-accent-hover-color {
+  @extend %text-color-white;
+
+  background-color: var(--accent-600);
+}
+%button-destructive-color {
+  @extend %text-color-white;
+
+  background-color: var(--error-775);
+}
+%button-destructive-hover-color {
+  @extend %text-color-white;
+
+  background-color: var(--error-875);
+}
+
+%button-outline-color {
+  --border-color: var(--border-color-outline);
+}
+%button-outline-hover-color {
+  --border-color: var(--border-color-outline-hover);
+}

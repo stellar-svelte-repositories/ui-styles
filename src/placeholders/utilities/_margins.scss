@@ -1,0 +1,17 @@
+%m-unset {
+  margin: unset;
+}
+
+@each $size in ("xs", "s", "m", "l", "xl", "xxl") {
+  %m-#{$size} {
+    margin: var(--margin-#{$size});
+  }
+  %mx-#{$size} {
+    margin-left: var(--margin-#{$size});
+    margin-right: var(--margin-#{$size});
+  }
+  %my-#{$size} {
+    margin-top: var(--margin-#{$size});
+    left: var(--margin-#{$size});
+  }
+}

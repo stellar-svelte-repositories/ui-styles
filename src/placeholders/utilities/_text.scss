@@ -1,0 +1,27 @@
+%font {
+  font-family:
+    Manrope,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    "Segoe UI",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+%font-size {
+  font-size: var(--font-size);
+}
+
+%font-bold {
+  font-weight: bold;
+}
+
+%non-selectable {
+  user-select: none;
+}
+
+%text-color {
+  color: var(--text-color);
+}

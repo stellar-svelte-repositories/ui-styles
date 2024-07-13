@@ -1,0 +1,6 @@
+dist
+
+**/*.iml
+
+npm
+/node_modules/

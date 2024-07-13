@@ -1,0 +1,5 @@
+@use "natives-elements/button" as button;
+
+@mixin remove-defaults-styles {
+  @include button.remove-defaults-styles;
+}

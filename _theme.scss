@@ -1,0 +1,50 @@
+/**
+ * Register theme variables in :root selector
+ * Some are fixed, some changes through media queries
+ * Some are redefined when the .dark-theme css class is used
+ */
+@use "src/variables";
+
+/**
+ * Nothing else than placeholders
+ */
+@use "src/placeholders";
+
+/**
+ * Unset styles or modify defaults styles
+ */
+@use "src/natives-elements" as natives-elements;
+
+/**
+ * Main class to set the theme where needed
+ */
+
+%full-view {
+  @extend %flex;
+  @extend %flex-col;
+  @extend %full-height;
+  @extend %full-width;
+  @extend %border-box;
+  @extend %m-unset;
+}
+
+%body {
+  @include natives-elements.remove-defaults-styles;
+  @extend %full-view;
+  @extend %font;
+  @extend %font-size;
+  @extend %background;
+  @extend %text-color;
+}
+
+:global(html) {
+  @extend %full-view;
+}
+
+:global(body) {
+  @extend %body;
+}
+
+:global(body[data-theme="dark"]) {
+  @extend %dark-theme;
+}

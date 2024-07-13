@@ -1,0 +1,10 @@
+@use "private/breakpoints" as breakpoints;
+
+:root {
+  --text-xs: 0.625rem;
+  --text-s: 0.8125rem;
+  --text-m: 1rem;
+  --text-l: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-xxl: 2rem;
+}

@@ -1,0 +1,7 @@
+@use "../../utilities";
+@use "../atoms";
+
+%element-base {
+  @extend %flex;
+  @extend %p-s;
+}

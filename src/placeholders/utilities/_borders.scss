@@ -1,0 +1,15 @@
+%border-radius {
+  border-radius: var(--border-radius);
+}
+
+%small-border {
+  border-width: 0.1rem;
+}
+
+%solid-border {
+  border-style: solid;
+}
+
+%border-color {
+  border-color: var(--border-color);
+}

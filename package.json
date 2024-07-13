@@ -1,0 +1,38 @@
+{
+  "name": "@stellar-svelte/ui-stylesheet",
+  "license": "AGPL-3.0-or-later",
+  "author": {
+    "email": "npmjs@goraj.fr",
+    "name": "Nicolas Goraj"
+  },
+  "version": "0.0.1",
+  "main": "_theme.scss",
+  "exports": {
+    "./theme": "./_theme.scss",
+    "./placeholders": "./src/_placeholders.scss"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "catalog:",
+    "@commitlint/config-conventional": "catalog:",
+    "husky": "catalog:",
+    "prettier": "catalog:",
+    "sass": "catalog:",
+    "stylelint": "catalog:",
+    "stylelint-config-standard": "catalog:",
+    "stylelint-config-standard-scss": "catalog:"
+  },
+  "scripts": {
+    "check:format": "npx prettier \"**/*.scss\" --check",
+    "write:format": "npx prettier \"**/*.scss\" --write",
+    "check:lint": "npx stylelint \"**/*.scss\"",
+    "write:lint": "npx stylelint \"**/*.scss\" --fix",
+    "build": "npx sass _theme.scss dist/output.css",
+    "test": "echo \"nothing to test\"",
+    "clean": "rm -rf dist",
+    "prepare": "npx husky install",
+    "commitlint": "npx commitlint --edit"
+  }
+}

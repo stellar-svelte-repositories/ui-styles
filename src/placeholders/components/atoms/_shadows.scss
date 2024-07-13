@@ -1,0 +1,33 @@
+@use "../../utilities";
+
+%abstract-shadow {
+  @extend %border-radius;
+  @extend %full-height;
+  @extend %full-width;
+  @extend %position-overlap;
+
+  content: "";
+}
+
+$shadows-sizes: (
+  ("s", 2px, 4px, 0.3),
+  ("m", 3px, 6px, 0.275),
+  ("l", 4px, 8px, 0.25)
+);
+
+@each $size, $offset, $blur, $opacity in $shadows-sizes {
+  %shadow-#{$size} {
+    @extend %abstract-shadow;
+
+    box-shadow:
+      (-$offset) (-$offset) $blur rgba(99, 99, 99, $opacity),
+      $offset $offset $blur rgba(31, 31, 31, $opacity);
+  }
+  %shadow-#{$size}-inner {
+    @extend %abstract-shadow;
+
+    box-shadow:
+      inset (-$offset) (-$offset) $blur rgba(99, 99, 99, $opacity),
+      inset $offset $offset $blur rgba(31, 31, 31, $opacity);
+  }
+}

@@ -1,0 +1,25 @@
+@use "../../utilities";
+@use "../atoms";
+@use "../molecules";
+
+%layer-base {
+  @extend %element-base;
+  @extend %border;
+}
+
+@each $size in ("s" "m", "l") {
+  %layer-#{$size} {
+    @extend %layer-base;
+    @extend %position-relative;
+
+    &::after {
+      @if $size == "s" {
+        @extend %shadow-s;
+      } @else if $size == "m" {
+        @extend %shadow-m;
+      } @else if $size == "l" {
+        @extend %shadow-l;
+      }
+    }
+  }
+}

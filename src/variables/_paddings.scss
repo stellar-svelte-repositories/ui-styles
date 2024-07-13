@@ -1,0 +1,43 @@
+@use "private/breakpoints" as breakpoints;
+
+:root {
+  --padding-xs: 0.25rem;
+  --padding-s: 0.5rem;
+  --padding-m: 1rem;
+  --padding-l: 1.25rem;
+  --padding-xl: 1.5rem;
+  --padding-xxl: 2rem;
+}
+
+@include breakpoints.media-min(breakpoints.$tablet-breakpoint) {
+  :root {
+    --padding-xs: 0.39rem;
+    --padding-s: 0.78rem;
+    --padding-m: 1.56rem;
+    --padding-l: 1.95rem;
+    --padding-xl: 2.34rem;
+    --padding-xxl: 3.125rem;
+  }
+}
+
+@include breakpoints.media-min(breakpoints.$desktop-breakpoint) {
+  :root {
+    --padding-xs: 0.703rem;
+    --padding-s: 1.406rem;
+    --padding-m: 2.813rem;
+    --padding-l: 3.516rem;
+    --padding-xl: 4.219rem;
+    --padding-xxl: 5.625rem;
+  }
+}
+
+@include breakpoints.media-min(breakpoints.$wide-desktop-breakpoint) {
+  :root {
+    --padding-xs: 0.625rem;
+    --padding-s: 1.25rem;
+    --padding-m: 2.5rem;
+    --padding-l: 3.125rem;
+    --padding-xl: 3.75rem;
+    --padding-xxl: 5rem;
+  }
+}

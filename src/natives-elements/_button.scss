@@ -1,0 +1,7 @@
+@use "unset";
+
+@mixin remove-defaults-styles {
+  button {
+    @extend %unset;
+  }
+}

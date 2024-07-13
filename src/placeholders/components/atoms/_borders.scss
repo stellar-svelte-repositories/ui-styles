@@ -1,0 +1,8 @@
+@use "../../utilities";
+
+%border {
+  @extend %small-border;
+  @extend %solid-border;
+  @extend %border-radius;
+  @extend %border-color;
+}

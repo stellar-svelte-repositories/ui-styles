@@ -1,0 +1,9 @@
+$tablet-breakpoint: 640px;
+$desktop-breakpoint: 1280px;
+$wide-desktop-breakpoint: 1720px;
+
+@mixin media-min($_min-width) {
+  @media screen and (min-width: $_min-width) {
+    @content;
+  }
+}
